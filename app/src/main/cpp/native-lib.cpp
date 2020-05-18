@@ -6,7 +6,7 @@
 #include <string>
 
 extern "C" JNIEXPORT jstring JNICALL
-Java_nl_frankkie_androidgithubactions_Util_stringFromJNI(
+Java_nl_frankkie_androidgithubactions_MainActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
     std::string hello = "Hello from C++";

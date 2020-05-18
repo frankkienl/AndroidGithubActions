@@ -11,4 +11,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
     }
+
+    /**
+     * A native method that is implemented by the 'native-lib' native library,
+     * which is packaged with this application.
+     */
+    external fun stringFromJNI(): String
+
+    companion object {
+
+        init {
+            System.loadLibrary("native-lib")
+        }
+    }
 }
